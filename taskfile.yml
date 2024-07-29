@@ -1,9 +1,12 @@
 version: '3'
+env:
+  IMG_PREFIX: ''
+
 tasks:
   build:
     desc: build docker image
     cmds:
-      - docker build -t cgit:latest .
+      - docker build -t ${IMG_PREFIX}cgit:latest .
 
   run:
     desc: run dockerized cgit app
@@ -13,5 +16,5 @@ tasks:
                --name cgit \
                --publish ${CGIT_PORT}:80 \
                --volume ${PROJECT_DIR}:/srv/projects \
-               cgit
+               ${IMG_PREFIX}cgit
 

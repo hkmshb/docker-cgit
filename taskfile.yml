@@ -1,6 +1,6 @@
 version: '3'
 env:
-  IMG_PREFIX: ''
+  IMG_PREFIX: 'hkmshb/'
 
 tasks:
   build:

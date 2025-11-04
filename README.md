@@ -18,7 +18,7 @@ To launch a container from this image, run:
 docker run -d --rm \
        --name cgit \
        -p 2340:80 \
-       -v <host-path>:/srv/projects \
+       -v <host-path>:/projects \
        hkmshb/cgit
 ```
 

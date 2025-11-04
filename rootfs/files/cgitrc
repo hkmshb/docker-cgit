@@ -23,7 +23,7 @@ enable-log-filecount=1
 enable-log-linecount=1
 
 root-title=Local Repos
-root-readme=/srv/about.html
+root-readme=/projects/about.html
 
 section-sort=1
 section-from-path=1
@@ -33,10 +33,10 @@ repository-sort=age
 
 readme=:README.md
 
-about-filter=/usr/lib/cgit/filters/about-formatting.sh
-source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
-project-list=/srv/repo.list
-scan-path=/srv/projects
+about-filter=/usr/lib/cgit/filters/source-formatting.sh
+source-filter=/usr/lib/cgit/filters/source-formatting.sh
+project-list=/etc/repo.list
+scan-path=/projects
 
 ##
 ## Search for these files in the root of the default branch of repositories

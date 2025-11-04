@@ -22,7 +22,7 @@ case "$EXTENSION" in
       # lowdown is small and perfect for Alpine
       # NOTE: source-filter wraps content within <pre><code> markup so added
       # </code></pre> to cancel effect and have markdown render properly
-      echo '</code></pre><style>@import url("/gfm.css");</style>'
+      echo '</code></pre><style>@import url("/gh-markdown.css");</style>'
       echo '<div class="markdown-body">'
       exec lowdown -t html | sed 's/<\/?code>//g'
       echo '</div><pre><code>'

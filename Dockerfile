@@ -15,15 +15,13 @@ RUN apk add --no-cache \
 
 RUN mkdir -p /projects/
 
-# lighttpd config & github markdown css
+# lighttpd config
 COPY rootfs/files/lighttpd.cgit.conf      /etc/lighttpd/
-COPY rootfs/files/gh-markdown.css         /usr/share/webapps/cgit/gh-markdown.css
 
 # cgit files
 COPY rootfs/files/source-formatting.sh    /usr/lib/cgit/filters/
-COPY rootfs/files/cgitrepos               /etc/
+COPY rootfs/files/gh-markdown.css         /usr/share/webapps/cgit/gh-markdown.css
 COPY rootfs/files/cgitrc                  /etc/
-
 
 # Expose port 80
 EXPOSE 80

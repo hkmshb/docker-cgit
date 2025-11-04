@@ -6,7 +6,7 @@
 # Falls back to plain text if neither tool is installed.
 
 BASENAME="$1"
-EXTENSION="${BASENAME##*.}"
+EXTENSION=$(printf '%s' "${BASENAME##*.}" | tr '[:upper:]' '[:lower:]')
 
 [ "${BASENAME}" = "${EXTENSION}" ] && EXTENSION=txt
 [ -z "${EXTENSION}" ] && EXTENSION=txt

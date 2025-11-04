@@ -35,7 +35,7 @@ readme=:README.md
 
 about-filter=/usr/lib/cgit/filters/source-formatting.sh
 source-filter=/usr/lib/cgit/filters/source-formatting.sh
-project-list=/etc/cgitrepos
+project-list=/projects/cgitrepos
 scan-path=/projects
 
 ##
